@@ -1,0 +1,50 @@
+.contentbox {
+	position: relative;
+	padding: 50px;
+	background-color: scheme(1);
+	display: inline-block;
+
+	.contentbox_content {
+		text-align: center;
+	}
+
+	@include media-breakpoint-down(xl) {
+		padding: 30px;
+		border-radius: 4px 4px 0px 0px;
+
+		background: linear-gradient(white, transparent);
+
+		h2 {
+			color: white;
+			font-weight: 600;
+		}
+		h2.main {
+			text-shadow: -1px 0 1px #677f87, 0 -1px 1px #677f87, 0 1px 1px #677f87, 1px 0 1px #677f87, 0 0 8px #677f87, 0 0 8px #677f87, 0 0 8px #677f87, 2px 2px 3px black;
+		}
+		h2.last {
+			text-shadow: -1px 0 1px gray, 0 -1px 1px gray, 0 1px 1px gray, 1px 0 1px gray, 0 0 8px gray, 0 0 8px gray, 0 0 8px gray, 2px 2px 3px black;
+		}
+		margin: 10px 0 0 10px;
+	}
+
+	@include media-breakpoint-down(xs) {
+		width: 100%;
+		padding: 20px;
+		border-radius: 0px;
+		/* opacity: .8; */
+		background: linear-gradient(white, transparent);
+		h2 {
+			color: white;
+			font-weight: 600;
+		}
+		h2.main {
+			text-shadow: -1px 0 1px #677f87, 0 -1px 1px #677f87, 0 1px 1px #677f87, 1px 0 1px #677f87, 0 0 8px #677f87, 0 0 8px #677f87, 0 0 8px #677f87, 2px 2px 3px black;
+		}
+		h2.last {
+			text-shadow: -1px 0 1px gray, 0 -1px 1px gray, 0 1px 1px gray, 1px 0 1px gray, 0 0 8px gray, 0 0 8px gray, 0 0 8px gray, 2px 2px 3px black;
+		}
+		margin: 0;
+	}
+
+	transition: all 0.3s ease-in-out;
+}

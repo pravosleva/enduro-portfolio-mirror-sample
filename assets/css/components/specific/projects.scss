@@ -1,0 +1,55 @@
+.projects {
+	.project {
+		width: 33.333%;
+		float: left;
+		background-size: cover;
+		min-height: 400px;
+		background-position: center center;
+		position: relative;
+		font-weight: 300;
+
+		.project_name {
+			opacity: 0.8;
+			background-color: scheme(1);
+			padding: 20px;
+			display: inline-block;
+			position: relative;
+			@include media-breakpoint-down(xl) {
+				margin: 10px 0 0 10px;
+				border-radius: 4px;
+			}
+			@include media-breakpoint-down(xs) {
+				margin: 0;
+				border-radius: 0px 0px 4px 0px;
+			}
+			transition: all 0.3s ease-in-out;
+		}
+			/*
+			filter: grayscale(0.9);
+			transition: filter $standard-transition;
+			*/
+		&:before {
+			content: '';
+			@include full();
+			background-color: rgba($black, 0);
+			transition: background-color $standard-transition;
+		}
+
+		&:hover {
+			&:before {
+				background-color: rgba($black, .4);
+			}
+			/* filter: grayscale(0); */
+		}
+
+		@include media-breakpoint-down(md) {
+			width: 50%;
+		}
+
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+	}
+
+	@include clearfix();
+}
